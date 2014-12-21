@@ -1,0 +1,37 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script type="text/javascript">
+	
+
+	function calculations(){
+		this.add = function(number1,number2){
+			return number1+number2
+		}
+	}
+
+	var newaddition = new calculations()
+
+	calculations.prototype.multiply = function(number1,number2){
+		return number1*number2
+	}
+
+	calculations.prototype.defaultnum = 30;
+
+
+	document.write("Multiplication: " + newaddition.multiply(2,2)+"<br><br>")
+	document.write("Addition: " +newaddition.add(10,15)+"<br><br>")
+
+	
+	var newcalculation = new calculations();
+
+	document.write("New calculation multiply: " + newcalculation.multiply(3,3) +"<br><br>")
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

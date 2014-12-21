@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+	<script type="text/javascript">
+
+	function printName(fname,lname){
+
+		this.firstName = fname;
+		this.lastName = lname;
+
+		
+	}
+
+
+	printName.prototype = {
+
+		fullname: function(){
+			var fullname = this.fullName + this.lastName
+		alert(fullname)	
+		}
+	}
+
+		
+	
+
+
+	var sagar = new printName("sagar","rathod");
+
+	
+	
+	</script>
+</head>
+<body>
+<div>sagar</div>
+<div style="border:1px solid blue; width:90px;top:100px;left100px; position:absolute">
+Kashinath
+</div>
+<div>Rathod</div>
+	
+</body>
+</html>

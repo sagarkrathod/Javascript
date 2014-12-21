@@ -1,0 +1,13 @@
+.infoimage{
+	color: red;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #666666;
+	padding: 10px;
+}
+
+.information{
+	background-color: green;
+	width: 100%;
+	height: 50px;
+}

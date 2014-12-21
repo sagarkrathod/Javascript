@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src='http://code.jquery.com/jquery-2.1.0.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$.getJSON( "../js/dataOther.json", function( data ) {
+				alert(data)
+			  var items = [];
+			  $.each( data, function( key, val ) {
+			    items.push( "<li id='" + key + "'>" + val + "</li>" );
+			  });
+			 
+			  $( "<ul/>", {
+			    "class": "my-new-list",
+			    html: items.join( "" )
+			  }).appendTo( "body" );
+			});
+
+		})
+	</script>
+</head>
+<body>
+
+</body>
+</html>

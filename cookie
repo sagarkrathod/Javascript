@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+	
+	var div = document.createElement('div');
+div.textContent = "Sup, y'all?";
+div.setAttribute('class', 'note');
+document.body.appendChild(div);
+
+
+var myDate =  new date()
+
+var hrs = myDate.get
+	
+</script>
+</head>
+<body>
+<div id="appendiv">
+</div>
+</body>
+</html>

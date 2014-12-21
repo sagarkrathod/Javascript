@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+	<script type="text/javascript">
+
+	function togglefunction(divname){
+
+		this.status = "Open";
+		this.divname = divname;
+
+		this.changeStatus = function(){
+
+			if(this.status == "Open"){
+				console.log("Open")
+				this.status = "Close"
+				document.getElementById(divname).style.backgroundColor = 'green';
+			}
+			else{
+				console.log("Close")
+				this.status = "Open"
+				document.getElementById(divname).style.backgroundColor = 'red';
+			}
+		}
+	}
+
+	var myinstance = new togglefunction("testdiv")
+
+
+
+	</script>
+</head>
+<body>
+<input type="button" value="click me" onclick="myinstance.changeStatus()">
+
+<div id="testdiv" style="width:200px;height:200px; background-color:red">s</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+<style type="text/css">
+	body{font-family: arial;font-size:19px; }
+	.printName div,.printNumber div{width: 200px;padding: 5px; border: 1px solid white; background-color: #cccccc}
+	.tablesort{background-color:#666 !important;color:#fff;cursor:pointer;}
+</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		/*
+		var fruits = ["Apple","Mango","Orange","Banana"]
+		
+		var vegetabiles = ['Spinach','Carrot','Tomato']
+
+		var numbers = [1,2,5,3,8,9,4,2,6,7,4,3,6,8,33,2,45,76,86,90,23,45,43,56,78,23,4,5]
+			
+		
+
+		document.write("<b>Array list fruits: </b> "+ fruits +"<br><br>")
+		document.write("<b>Array list vegetabiles: </b>"+ vegetabiles +"<br><br>")
+
+		var veggies = fruits.concat(vegetabiles)
+
+		document.write("<b>Concat: fruits + vegetabiles: </b>"+veggies)
+
+		document.write("<b>Concat: fruits + vegetabiles: </b>"+veggies + "<br><br>")
+
+		document.write("sorting array: " + numbers.sort())
+
+		var myword = "hello";
+
+		for (var i = 0; i < myword.length; i++) {
+			//document.write(myword.charAt(i)+"  &nbsp;&nbsp;&nbsp;&nbsp;")
+		};
+
+		for (var i = 0; i < 10; i++) { 
+	    	//alert(i)
+		}
+		var c1Div = document.createElement('div');
+		document.getElementById('printrecord').appendChild(c1Div)
+		
+		$('#printrecord').append('<div>sagar</div>');
+
+		for(i=0;i<=fruits.length-1;i++){
+			$( ".printrecord" ).append( "<div>"+fruits[i]+"</div>" );
+		}
+		$(".tablesort").click(function){
+
+		}
+		*/
+		var tableData = ['sagar','sneha','rajan','sume','ketan','saisha','ananya','aditya']
+		var tableDatanumber = [1,2,5,3,8,9,4,2,6,7]
+		
+		function generateTable(tableName,dataName){
+			
+			//var tablename =  "."+tablename
+			$( "."+tableName ).append( "<div class='tablesort'>sort</div>" );
+			
+			alert(dataName)
+			for(i=0;i<=dataName.length-1;i++){
+				$( "."+tableName ).append( "<div>"+dataName[i]+"</div>" );
+			}
+
+
+			$("."+tableName+" .tablesort").click(function(){
+				dataName.sort()
+				$("."+tableName).html("")
+				generateTable(tableName)
+				
+
+			})
+			
+		}
+
+
+		var nameTable =  new generateTable('printName','tableData')
+		var printNumber = new generateTable('printNumber','tableDatanumber')
+
+
+});
+
+	//alert(calculation)
+	</script>
+</head>
+<body>
+<div class="printName"></div>
+
+<div class="printNumber"></div>
+	
+</body>
+</html>

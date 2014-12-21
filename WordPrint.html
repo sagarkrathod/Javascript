@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	
+	function print_word_space(param_str){
+
+		this.param_str = param_str;
+
+		this.add_space = function(){
+
+			for(i=0;i<this.param_str.length;i++){
+				document.write(this.param_str.charAt(i) + "   &nbsp;&nbsp;&nbsp; ")
+			}
+			document.write("<br><br>")
+
+		}
+
+	}
+
+	var exp_string = new print_word_space("sagarrathod")
+	exp_string.add_space()
+
+
+	var exp_string1 = new print_word_space("snehasitaramrathod")
+
+	exp_string1.add_space()
+
+
+
+	function add_space_array(param_str){
+
+		this.param_str = param_str;
+
+		this.add_space = function(){
+			
+
+		}
+	}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

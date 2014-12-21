@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+
+<div id="btns">
+<input type="button" name="" id="homeBtn" value="Home">
+<input type="button" name="" id="serviceBtn" value="Service">
+<input type="button" name="" id="contactBtn" value="Contact Us">
+</div>
+<div id="workspace"> </div>
+<script type="text/javascript">
+	(function() {
+	 	'use strict';
+
+	 	function tabs(parentId) {
+	 		var parentElem = document.getElementById(parentId);
+	 		var kids = parentElem.children;
+	 		for (var i = 0; i < kids.length; i++) {
+	 			var kid = kids[i];
+	 			kid.originalValue = kid.value;
+	 			kid.onclick = function (e) {
+	 				for (var k = 0; k < kids.length; k++) {
+	 					var kk = kids[k];
+	 					kk.value = 'inactive ' + kk.originalValue;
+	 				}
+	 				this.value = this.originalValue;
+	 			}.bind(kid);
+	 		}
+	 	}
+
+	 	tabs('btns');
+		
+	})();
+	</script>
+	
+</body>
+</html>

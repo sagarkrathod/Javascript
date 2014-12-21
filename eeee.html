@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+
+function removeduplicates(){
+
+	var arr = [1,2,3,4,2,4,5,3,4,5,7,6,5,6,4,5,3,4,5,6,7,8,0,9,8,9,0,5,7,8,9,2,3,1,2,3,6,4,5,7,8,9]
+	document.write("orifinal array:------" + arr +"<br><br>")
+	var sortedarr = arr.sort();
+	var arraylenght = sortedarr.length;
+
+	
+	//document.write("array length:" + sortedarr.length + "<br><br>")
+	
+	for(i=0;i<arraylenght-1; i++){
+		//document.write("Loop index :--------" + i + "-----" + "<br>")
+		if(sortedarr[i] == sortedarr[i+1]){
+			//document.write(sortedarr[i] +" : "+ sortedarr[i+1] + "<br>")
+			//document.write("Duplicates are:"+ sortedarr[i] + ",")
+			sortedarr.splice(i,1);
+			i=
+			//delete sortedarr[i]
+			//document.write(sortedarr + "<br><br>")
+		}
+	}
+
+	document.write("<br><br><br><br><br> Array After Removing Duplicates: "+sortedarr.join('-'))
+	// sortedarr.forEach(function(arrayitem,index){
+	// 	//document.write("for each running for : " + index+ " times: " + arrayitem + "<br>")
+	// 	if(sortedarr[index] == sortedarr[index+1]){
+	// 		document.write(index)
+	// 		sortedarr.splice(index,1)
+	// 		//document.write("sortedarr : " +sortedarr + "<br>")
+	// 	}
+		
+	// })
+	//document.write("After removing duplicated: "+sortedarr)
+
+}
+
+removeduplicates()
+
+</script>

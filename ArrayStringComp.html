@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+var mtarr = ['sagar','eaga','swaga','sragarrathod'];
+
+var longeststring = 0;
+var shortest = mtarr.length;
+var elem;
+var resultstring;
+var resultarray= [];
+
+	for(i=1;i<mtarr.length;i++){
+		if(shortest > mtarr[i].length){
+			shortest = mtarr[i].length
+		}
+	}
+	for(i=0;i<mtarr.length;i++){
+		if(longeststring < mtarr[i].length){
+			longeststring = mtarr[i].length;
+		}
+	}	
+
+	
+	//['sagar','sam','sart','sagarrathod'];
+
+	for(var i=0; i<shortest; i++){
+		elem = mtarr[0].charAt(i) // s , a ,g
+		//console.log(elem)
+		for(var j=1;j<mtarr.length;j++){
+			console.log(mtarr[j].charAt(i) +" : "+elem)
+			if(mtarr[j].charAt(i) == elem){   // 1. s==s , 2.
+				resultarray[i]=elem;
+			}else{
+				break;
+			}	
+		}
+		
+		
+	}
+	document.write("input string: "+mtarr + "<br><br>")
+	document.write("Matching is: "+resultarray.join(''))
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

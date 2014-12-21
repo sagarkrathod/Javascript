@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+Array.prototype.clone = function() {
+	return this.slice(0);
+};
+
+var testarr = [0,1,3,2,3,4,3,55,3,2,4]
+
+document.write(testarr)
+	var myfav = new Array();
+
+	myfav['name'] = true;
+	myfav['surname'] = true;
+
+	console.log(myfav.name)
+
+	//alert(myfav.name)
+
+
+	function removedup(arr){
+		
+		var exist = {};
+		var resultarray = [];
+		var elem;
+
+		for(var i=0;i<arr.length;i++){
+			elem = arr[i]; // 1
+			alert(exist[5])
+			//console.log(exist[elem])
+			if(!exist[elem]){ 
+				console.log(!exist[elem])
+				exist[i] =  true;
+				resultarray.push(elem)
+			}
+		}
+
+		document.write(resultarray)
+
+	}
+
+	removedup([1,1,2,5,5,])
+
+
+
+
+	function stringcomp(arr){
+
+		var result = [];
+		var compait = {};
+		var elem;
+
+		for(var i=0;i<arr.length;i++){
+
+			var temp = arr[i].charAt(i);// s
+			
+			for(var j=i+1;j<arr.length;j++){  // j=1
+			 	if(temp == arr[j].charAt(i)){  // arr[1].charAt(0) ==> s
+			 		elem += temp
+			 	}
+			 }
+			
+		}
+		//document.write(elem)
+
+	}
+	var myArray = ['adam', 'bianca', 'cat', 'dennis'];
+var myFunc = function (letter) {
+    for (var i = 0; i < letter.length; i += 1) {
+        // Use the index i here
+       // console.log(letter[i].charAt(0));
+    }
+}
+
+// Call your function, passing in the array you defined:
+myFunc(myArray);
+// a
+// b
+// c
+// d
+
+	stringcomp(['sag','sagar','sagarrathod','rathod'])
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+  		var globalObj = {
+                        accountList : [{ "id" : 3423, "name" : "Sagar"},
+                        			   { "id" : 434, "name" : "Sneha"},
+                        			   { "id" : 4343, "name" : "Suma"},
+                        			   { "id" : 6767, "name" : "rajan"},
+                        			  ],
+                        accountOwner:{name:"sagar"},
+                        accountManager:{managerName:"sneha manager"}
+                      };
+
+  		$(document).ready(function(){
+  			
+
+
+  			$.each(globalObj.accountList, function(index,account){
+
+  				
+  				var name = $(account).attr("name")
+  				//var name = account.name;
+  				var id = account.id; 
+
+  				//document.write(name + "<br>")
+  			})
+  			
+  			for(i=0; i<globalObj.accountList.length; i++){
+  				
+				var id = globalObj.accountList[i].id;
+  				var name = globalObj.accountList[i].name;
+  				document.write(id +":"+ name + "<br>")
+  			}
+  			
+
+
+  		})
+
+</script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

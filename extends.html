@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+
+	function Employee(EmpID,Fname,Mname,Lname,Address,Phone,Salary,Insurance){
+		this.EmpID = EmpID;
+		this.Fname = Fname;
+		this.Mname = Mname;
+		this.Lname = Lname;
+		this.Address = Address;
+		this.Phone = Phone;
+		this.Salary = Salary;
+		this.Insurance = Insurance;
+	}
+
+	Employee.prototype = {
+		showName: function(){
+
+			return this.Fname +" "+ this.Mname +" "+ this.Lname
+		},
+		showSalary: function(){
+			var monthlySalary = this.Salary/12;
+			var monthlySalaryWT = monthlySalary - ((monthlySalary*30)/100) - this.Insurance;
+			return  "Anual Salary: "+this.Salary+"<br><br>"+
+					"Without Tax Per month: "+monthlySalary+"<br><br>"+
+					"Insurance Amount: $"+this.Insurance+"<br><br>"+
+					"With 30% Tax + Insurance Per Month: "+monthlySalaryWT+ "<br>" 
+		},
+		showAddress: function(){
+			return this.Address
+		}
+	}
+
+
+	//var sagar = new Employee(4567,'sagar','kashinath','rathod','34655 skylark dr','980 322 8355',120000,700)
+
+	//document.write('Name: '+sagar.showName() + "<br><br>" + sagar.showSalary())
+
+	//var sneha = new Employee(3433,'sneha','sitaram','rathod','kashis park','980 229 4590',150000,400)
+
+	
+	//document.write('Name:'+sneha.showName() + "<br><br>" + sneha.showSalary() + "<br> Address: " + sneha.showAddress())
+
+
+	function player(){
+
+		this.name;
+		this.hitpoint = 100;
+		this.attack = function attack(opponent){
+			opponent.hitpoint -= 10;
+			document.write("<b>"+this.name +"</b> Just Hit <b>"+ opponent.name + "</b><br><br>")
+		}
+	}
+
+	var p1 = new player()
+	var p2 = new player()
+	var p3 = new player()
+
+	p1.name = "Stark"
+	p2.name = "Lanister"
+	p3.name = "Doctor"
+
+	p1.attack(p2)
+
+	document.write("<b>"+p2.name + "</b> Has <b>" + p2.hitpoint + " </b>Hit point Left"+ "<br><br>")
+
+	player.prototype.heal = function(opponent){
+		opponent.hitpoint += 5;
+
+		document.write("<b>"+this.name +"</b> Just Heal the<b> "+ opponent.name +"</b> And now the hit points are <b>" + opponent.hitpoint+ "</b><br><br>")
+	}
+
+	p3.heal(p2)
+
+	
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

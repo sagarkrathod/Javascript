@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#sagar{
+			
+			-webkit-transition:opacity 1.0s linear 0s;
+			transition:opacity 1.0s linear 0s;
+		}
+
+
+	</style>
+	
+</head>
+<body>
+
+<h1>My Name is <span id="sagar"></span></h1>
+
+
+<script type="text/javascript">
+	function wordSlide(id){
+		this.id = id;
+		this.index = 0;
+		this.values = ["Sagar","Sneha","Suma","Rajan","Ketan","Manoj","Shaurya","Ananya","Aditya","Saisha"];
+		this.index = Math.floor( Math.random() * this.values.length);
+
+
+		this.initiateslide = function(){
+			
+			//return Math.floor( Math.random() * this.values.length);
+			var values = ["Sagar","Sneha","Suma","Rajan","Ketan","Manoj","Shaurya","Ananya","Aditya","Saisha"];
+			var index = Math.floor( Math.random() * values.length)
+			document.getElementById('sagar').innerHTML = values[Math.floor( Math.random() * values.length)];
+			console.log(index); 	
+			setTimeout(this.callingfun,1000)
+		}
+		this.callingfun = function(){
+			alert('')
+			window.setTimeout("this.initiateslide",1000)
+		}
+
+	}
+
+	var sagar = new wordSlide("sagar")
+	sagar.initiateslide()
+	
+
+	//setTimeout(callingfun(),3000)
+
+	
+	
+	//alert(sagar.initiateslide())
+	//alert(sagar.initiateslide())
+	//alert(sagar.initiateslide())
+	
+
+
+
+	
+
+	</script>
+</body>
+</html>

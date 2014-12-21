@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	function find_odd_number(param_number){
+
+		this.param_number = param_number;
+
+		this.find_odd_number = function(){
+
+			
+
+			for(i=0;i<param_number.length;i++){
+
+				var result = this.param_number[i]%2;
+
+					if(result == 0){
+						document.write(this.param_number[i] +"<span style='color:green'> is a even number ! </span>" +"<br>")
+					}
+					else{
+						document.write(this.param_number[i] +"<span style='color:red'> is a odd number ! </span>"+"<br>")	
+					}
+			}
+			
+
+		}
+	}
+
+	var testarray = [2,34,56,34,56,43,789,34,56,12,3,4,5,234,34,12,3,5,12,70,89,78,65]
+	var testnumber = new find_odd_number([2,34,56,34,56,43,789,34,56,12,3,4,5,234,34,12,3,5,12,70,89,78,65])
+
+	testnumber.find_odd_number()
+
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

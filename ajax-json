@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script type="text/javascript">
+	var myhttp = new XMLHttpRequest();
+
+	
+
+	myhttp.onreadystatechange = function(){
+		
+		
+
+		if(myhttp.readyState == 4){
+			alert(myhttp.responseText)
+		}
+	}
+
+
+	myhttp.open("GET","json.txt",true)
+	myhttp.send()
+	</script>
+</head>
+<body>
+	<div id="painting">
+		
+	</div>
+</body>
+</html>
